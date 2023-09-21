@@ -1,0 +1,15 @@
+{
+  "name": "google-bq-functions-workshop-sc2023",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.17.3"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@chainlink/env-enc": "^1.0.5",
+    "@chainlink/functions-toolkit": "^0.2.1",
+    "axios": "^1.5.0",
+    "ora": "^7.0.1",
+    "readline": "^1.3.0"
+  }
+}

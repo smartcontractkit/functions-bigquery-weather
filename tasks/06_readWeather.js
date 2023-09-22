@@ -48,7 +48,7 @@ task(
         "Response hex decoded":formatted ,
       });
 
-console.log( `\nWelcome to SmartCon 2023.  The weather in Barcelona today is: ${formatted} degrees Fareinheit. Enjoy the conference!\n\n`)
+console.log( `\nWelcome to SmartCon 2023.  The weather in Barcelona today is: ${formatted} degrees Fahrenheit. Enjoy the conference!\n\n`)
     } else if (latestResponse == "0x") {
       console.log("Empty response: ", latestResponse);
     }

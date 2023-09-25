@@ -6,7 +6,7 @@ Note: this project is for workshop and demo purposes only. It is not appropriate
 
 ## Before you start...
 
-Install NodeJS V18 or above. And Install [Deno]https://docs.deno.com/runtime/manual/getting_started/installation) - for eg on Mac, using homebrew you can run `brew install deno`
+Install [NodeJS V18](https://nodejs.org/en/download) or above. And Install [Deno]https://docs.deno.com/runtime/manual/getting_started/installation) - for eg on Mac, using homebrew you can run `brew install deno`.
 
 Get at least 5 [LINK token](faucets.chain.link).
 Get [Mumbai Matic](https://faucet.polygon.technology/)

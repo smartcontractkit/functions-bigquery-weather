@@ -58,7 +58,7 @@ task("upload-to-don", "uploads encrypted secrets to DON")
       version,
     })
 
-    console.log(`\nUploaded encrypted secrets to DON at slotId ${slotId} and version ${version}: Status : ${success}.\n*** Please note the following encrypted secrets reference: ${encryptedSecretsReference} for the next step. It will be valide for ${minutesUntilExpiration} minutes ***`)
+    console.log(`\nUploaded encrypted secrets to DON at slotId ${slotId} and version ${version}: Status : ${success}.\n*** Please note the following encrypted secrets reference: ${encryptedSecretsReference} for the next step. It will be valid for ${minutesUntilExpiration} minutes ***`)
   });
 
 

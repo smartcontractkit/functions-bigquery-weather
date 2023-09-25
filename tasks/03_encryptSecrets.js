@@ -39,7 +39,7 @@ task(
       return;
     }
 
-    // Generate JWT token and set it to Request Config.
+    // Generate JWT token and add it to Request Config's `secrets` property.
     requestConfig = await addTokenToConfigSecrets(requestConfig);
 
     const outputfile = path.join(process.cwd(), taskArgs.output);

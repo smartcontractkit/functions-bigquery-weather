@@ -61,8 +61,8 @@ You will be using the following keys as secrets in the next section for your Cha
 
 ```
 POLYGON_MUMBAI_RPC_URL
-PRIVATE_KEY= # This is your dev wallet private key
 RPC_URL= # This will also be the polygon mumbai rpc url
+PRIVATE_KEY= # This is your dev wallet private key
 GOOGLE_PROJECT_ID= # This is the "project_id" for the service account
 GOOGLE_ISS= # This is the "client_email" address for the service account
 GOOGLE_KEY= # This is the "private_key" for the service account
@@ -77,7 +77,7 @@ POLYGONSCAN_API_KEY # Optional if you'd like to verify the FunctionsBiqQueryCons
 
 # Project Run Steps
 
-1. Go to the [Functions Subscriptions App](https:functions.chain.link). Connect your wallet to Polygon Mumbai on the Functions web app. Create your first subscription. This include two transactions:
+1. Go to the [Functions Subscriptions App](https://functions.chain.link). Connect your wallet to Polygon Mumbai on the Functions web app. Create your first subscription. This include two transactions:
 
 - one to accept the Terms of Service that adds your wallet address to the Allowlist, and
 - the other to create your Functions Subscription on-chain.
@@ -94,7 +94,7 @@ Please add at least 5 LINK to your subscription to run this project's code. This
 
 Take a note of the contract `address` from your console - we will need it in the next step.
 
-3.Next, we add this consumer contract as an authorized consumer against our subscription so that Chainlink Functions will know that the consumer contract is authorized to use our subscription balance. We do this by running:
+3. Next, we add this consumer contract as an authorized consumer against our subscription so that Chainlink Functions will know that the consumer contract is authorized to use our subscription balance. We do this by running:
 
 `npx hardhat add-consumer --contract 0x__YOUR__CONTRACT__ADDRESS --subid <<SUBSCRIPTION_ID>> --network polygonMumbai`
 
@@ -125,6 +125,8 @@ Take a note of the secrets reference hex string. We will need this shortly.
 6. Now we are ready run the Functions request! We send our custom secret and the other parts of the `requestConfig` object in `./request-config.js` to our Functions Big Query Consumer contract, which in turn initiates the Chainlink Functions Request.
 
 **Note:** The default command below will run a local simulation of the custom script in `./BigQuery-weather.js` - including HTTP requests - so you can see what the expected response will be.However if you do not have Deno installed you should set the `--simulate false` flag.
+
+
 `npx hardhat request-weather --network polygonMumbai --subid <<SUBSCRIPTION_ID>> --contract 0x__YOUR__CONTRACT__ADDRESS --secretsref 0X_SECRETS_REF`
 
 Unless you pass `--simulate false` the local simulator included in the Chainlink Functions NPM package runs your custom JS code locally, including the HTTP requests to the Google BigQuery service. The response from the simulated script execution is printed to your console. Then, the request is submitted as an on-chain Transaction, which sends your source code and other request parameters to your `FunctionsBigQueryConsumer` contract, and from there Chainlink's decentralized oracle networks will execute the source code and return the response to your consumer contract.

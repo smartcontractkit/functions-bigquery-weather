@@ -88,7 +88,7 @@ Once a Functions Subscription is created you can manage it from the UI.
 
 Please add at least 5 LINK to your subscription to run this project's code. This can be done from the `ACTIONS` button when your wallet is connected.
 
-2.  Next we deploy the `FunctionsBigQueryConsumer.sol` smart contract on to the Mumbai testnet. Optionally, if we have set the `POLYGONSCAN_API_KEY` environment variable, we can pass the `--verify` flag to verify our smart contract so we can interact with it via the blockexplorer's UI.
+2.  Next we deploy the `FunctionsBigQueryConsumer.sol` smart contract on to the Mumbai testnet. Optionally, if we have set the `POLYGONSCAN_API_KEY` environment variable, we can pass the `--verify true` flag to verify our smart contract so we can interact with it via the blockexplorer's UI.
 
 `npx hardhat deploy-consumer --network polygonMumbai --verify false`
 

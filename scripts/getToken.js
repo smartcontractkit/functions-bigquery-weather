@@ -4,6 +4,7 @@ const axios = require("axios");
 const fs = require("fs");
 
 require("@chainlink/env-enc").config();
+// require('dotenv').config()
 
 const G_KEY = process.env.GOOGLE_KEY;
 const G_ISS = process.env.GOOGLE_ISS;

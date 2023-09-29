@@ -6,6 +6,7 @@ const {
 
 const fs = require("fs");
 require("@chainlink/env-enc").config()
+// require('dotenv').config()
 
 // Configure the request by setting the fields below
 const QUERY = `SELECT * FROM bigquery-public-data.noaa_gsod.gsod2023 where stn = '081810' order by date desc limit 1`;

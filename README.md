@@ -2,6 +2,9 @@
 
 This project is configured to run with Chainlink Functions on the Polygon Mumbai testnet. Running on other testnets will require config to be added in `./networks.js`.
 
+The architecture of Chainlink Functions is depicted below:
+![Chainlink Architecture Diagram](https://user-images.githubusercontent.com/8016129/271724401-18d4326e-40d7-46ce-af52-12b8eacef347.png)
+
 Note: this project is for workshop and demo purposes only. It is not appropriate for production use .
 
 ## Before you start...
